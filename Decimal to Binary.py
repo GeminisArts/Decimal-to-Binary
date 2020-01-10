@@ -27,7 +27,6 @@ while repeat < 5:
         if NewDec > 15:
             print("This will not be added to NewDecList, try again.\n")
             repeat -= 1
-            print(repeat)
         elif NewDec <= 15 and NewDec >= 0:
             NewDecList.append(NewDec)
             print("This will be added to NewDecList.\n")
