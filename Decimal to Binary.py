@@ -1,18 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
+#Importing libraries
 import numpy as np
 from numpy import linalg as LA
 import itertools
 from itertools import islice
 
-
-# In[ ]:
-
-
+#Decimal to binary
 def DecToBin(n):
     
     if n<=1:
@@ -20,10 +12,7 @@ def DecToBin(n):
     else:
         return DecToBin(n//2) + DecToBin(n%2)
 
-
-# In[ ]:
-
-
+#User input
 NewDec = int()
 NewDecList = []
 repeat = 1
@@ -48,10 +37,7 @@ while repeat < 5:
         
         repeat += 1
 
-
-# In[ ]:
-
-
+#Create list
 Results = []
 
 Input = NewDecList
@@ -65,23 +51,10 @@ Results2 = iter(Results)
 Output = [list(islice(Results2, elem)) for elem in length]
 ResultList = [[int(i) for i in sub] for i in Output for sub in i]
 
-
-# In[ ]:
-
-
+#Create array
 ResultArray = np.array(ResultList)
 print(ResultArray)
 
-
-# In[ ]:
-
-
+#Create matrix
 ResultMatrix = np.matrix(ResultArray)
 print(ResultMatrix)
-
-
-# In[ ]:
-
-
-
-
