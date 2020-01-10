@@ -4,6 +4,6 @@ This code is for converting decimals, more specificaly integers, to binary from 
 
 ## Required Libraries
 
-numpy, linalg
+_numpy, linalg
 
 itertools, islice
