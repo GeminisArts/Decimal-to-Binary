@@ -4,6 +4,12 @@ This code is for converting decimals, more specificaly integers, to binary from 
 
 ## Required Libraries
 
-__numpy, linalg
+'''sh
+numpy, linalg
+'''
 
+and
+
+'''sh
 itertools, islice
+'''
