@@ -5,4 +5,5 @@ This code is for converting decimals, more specificaly integers, to binary from 
 ## Required Libraries
 
 _numpy
+
 _itertools
