@@ -1,18 +1,12 @@
-#!/usr/bin/env python
-# coding: utf-8
+##This is the code with a few extra cells
 
-# In[ ]:
-
-
+#Libraries
 import numpy as np
 from numpy import linalg as LA
 import itertools
 from itertools import islice
 
-
-# In[ ]:
-
-
+#Decimal to binary
 def DecToBin(n):
     
     if n<=1:
@@ -20,10 +14,7 @@ def DecToBin(n):
     else:
         return DecToBin(n//2) + DecToBin(n%2)
 
-
-# In[ ]:
-
-
+#User input
 NewDec = int()
 NewDecList = []
 repeat = 1
@@ -43,10 +34,7 @@ while repeat < 5:
         
         repeat += 1
 
-
-# In[ ]:
-
-
+#Binary list
 Results = []
 
 Input = NewDecList
@@ -60,31 +48,19 @@ Results2 = iter(Results)
 Output = [list(islice(Results2, elem)) for elem in length]
 ResultList = [[int(i) for i in sub] for i in Output for sub in i]
 
-
-# In[ ]:
-
-
+#Binary array
 ResultArray = np.array(ResultList)
 
-
-# In[ ]:
-
-
+#Binary matrix
 ResultMatrix = np.matrix(ResultArray)
 
-
-# In[ ]:
-
-
+#Eigenvalues and eigenvectors
 w, v = LA.eig(ResultArray)
 
 print("The eigenvalues are: \n", w)
 print("\nThe eigenvectors are: \n", v)
 
-
-# In[ ]:
-
-
+#Check to see if matrix is Hermitian
 HRMatrix = ResultMatrix.getH()
 
 if np.all(ResultMatrix == HRMatrix):
@@ -92,10 +68,7 @@ if np.all(ResultMatrix == HRMatrix):
 else:
     print("The matrix is not Hermitian")
 
-
-# In[ ]:
-
-
+#Check to see if matrix is unitary
 UniMatrix = ResultMatrix.dot(HRMatrix)
 
 if np.all(UniMatrix == np.identity(4)):
@@ -103,10 +76,7 @@ if np.all(UniMatrix == np.identity(4)):
 else:
     print("The matrix is not unitary.\n")
 
-
-# In[ ]:
-
-
+#Check to see if matrix is normal
 NormMatrix1 = ResultMatrix.dot(HRMatrix)
 
 NormMatrix2 = HRMatrix.dot(ResultMatrix)
@@ -115,10 +85,3 @@ if np.all(NormMatrix1 == NormMatrix2):
     print("The matrix is normal.\n")
 else:
     print("The matrix is not normal.\n")
-
-
-# In[ ]:
-
-
-
-
