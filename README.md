@@ -7,3 +7,7 @@ This code is for converting decimals, more specificaly integers, to binary from 
 numpy, linagl
 
 itertools, islice
+
+## Documentation
+
+It's suggested you download the write up since it goes more into the theory behind converting decimal to binary and gives a more indepth explaination of how the code works.
